@@ -133,6 +133,9 @@ VERSION: 2.0.0
   float:left;
   margin-left: 2.5%;
 }
+#gradient {
+  overflow-y: hidden;
+}
 /*CSS Top Title ("Benefits By Design")*/
 #titleLabel {
     font-size:350%;
