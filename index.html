@@ -1,0 +1,48 @@
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: November 27 2015
+VERSION: 2.0.0
+
+NOTE
+Temporary security issues
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Grabbing the jquery library for the background Gradiant-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <!--Adding the login.css Style sheet-->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <!--Icon in the top of the tab-->
+    <link rel="shortcut icon" type="image/x-ico" href="Pictures/icon.png" />`
+    <!--Words in the tab-->
+    <title>Buzzboard Login</title>
+  </head>
+  <body>
+    <!--Pulling in the javascript-->
+      <script type="text/javascript" src="js/login.js"></script>
+      <script type="text/javascript" src="js/backgroundGradiant.js"></script>
+    <!--Creating black top-->
+      <div id = "top-div">
+
+      </div>
+      <div id="gradient">
+        <!--Login area-->
+        <div id="loginDiv">
+          <center>
+            <h1 id="loginTitle">Buzzboard Login</h1>
+            <!--Username-->
+            <input type="text" id="username" placeholder=" Username" autocomplete="off"><br/><br/>
+            <!--Password-->
+            <input type="password" id="password" placeholder=" Password"><br/><br/>
+            <!--Login-->
+            <input type="button" id="loginBtn" value="Log On" onClick="login()">
+          </center>
+        </div>
+      </div>
+  </body>
+</html>

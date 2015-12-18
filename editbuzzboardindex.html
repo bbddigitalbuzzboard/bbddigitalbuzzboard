@@ -1,0 +1,148 @@
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: November 27 2015
+VERSION: 2.0.1
+
+NOTE
+To make a youtube video you have to create a fake playlist in the url.
+Then loop it and auto play is.
+add rel=0&autoplay=1&loop=1&playlist=V3oJR5IAMxM after the question mark and
+change V3oJR5IAMxM to whatever the video code is. It will autoplay and
+loop the same video over and over.
+-->
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="http://alasql.org/console/alasql.min.js"></script>
+<!--Tab Title-->
+<title>Benefits By Design Edit Buzzboard</title>
+<!--Icon in tab-->
+<link rel="shortcut icon" type="image/x-ico" href="Pictures/icon.png" />`
+<!--Pulling in Javascript and css-->
+<script type="text/javascript" src="js/readStoredValues.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<!--Pulling in Gradiant Colors-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+   <!-- Load jQuery UI CSS  -->
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <!-- Load jQuery JS -->
+   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+   <!-- Load jQuery UI Main JS  -->
+   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   <!-- Load SCRIPT.JS which will create datepicker for input field  -->
+   <script src="js/script.js"></script>
+   <script type="text/javascript" src="js/backgroundGradiant.js"></script>
+</head>
+<body id="gradient">
+<!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+<form action='buzzboardindex.html' method='get'>
+<div id="top-container">
+  <!--BBD LOGO TOP LEFT-->
+  <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="150" width="250" id="BBDLOGO">
+  <!--Title of the page, TOP MIDDLE-->
+  <!--<img src="Pictures/title.png" alt="title" height="125" width="600" id="title">-->
+  <input type='text' name='titleHeader' id="editTitleHeader" placeholder="Enter Display Header"/>
+</div>
+<!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+  <!--Main div below top div-->
+  <div id="main-container">
+    <div id="left-container-2">
+      <div id="notification-container" onloadeddata="enableDisable(this.checked)">
+      <h2>Twitter</h2>
+      <h3>  <input type="checkbox" name="twitterSwitch" value="On" id="twitterSwitch" checked="checked"> Use Twitter as Notification</h3>
+      <h2>Instagram</h2>
+      <h3>  <input type="radio" name="radioInstagram" value="tile" id="twitterSwitch"> Tile Instagram Feed </br>
+            <input type="radio" name="radioInstagram" value="slideshow" id="twitterSwitch"> Slideshow Instagram Feed</br>
+            <input type="radio" name="radioInstagram" value="none" id="twitterSwitch" checked="checked" > No Instagram</h3>
+      </div>
+      <h2>Video Examples</h2>
+      <!--Example videos that could be put up-->
+      <ul class="videoExample">
+        <!--Motivational Example Div-->
+        <div id="motDiv">
+          <h2 class="videoExample">Motivational</h2>
+          <li class="videoExample">sowtSXudT_8
+          <li class="videoExample">z5avVsKjNyo
+        </div>
+        <!--Cute Example Div-->
+        <div id="cuteDiv">
+          <h2>Cute</h2>
+          <li>HSxJkKiHXbw
+        </div>
+        <!--Funny Example Div-->
+        <div id="funnyDiv">
+          <h2>Funny</h2>
+          <li>CB1Pukr0nFQ
+        </div>
+        <!--Calvin and Hobbs Div-->
+        <div id="CalvHobbsDiv">
+          <h2>Calvin and Hobbs</h2>
+          <li>fE7nv7BH19Q
+        </div>
+      </ul>
+    </div>
+<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <div id="edit-mid-container">
+      <!--Embed Text location-->
+      <h2>Use Youtube Video 1</h2>
+      <h3>  <input type="checkbox" name="youtube1Switch" value="yes" id="twitterSwitch"> Use Video 1</h3>
+      <h3 class="youtubeText">Video 1 Code for Video 1:</h3>
+      <input type='text' name='youtubeURL' id="youtubeURL" placeholder="Enter Video 1 Code"/>
+      <h2>Use Youtube Video 2</h2>
+      <h3>  <input type="checkbox" name="youtube2Switch" value="yes" id="twitterSwitch" checked="checked">Use Video 2</h3>
+      <h3 class="youtubeText">Video 2 Code for Video 2:</h3>
+      <input type='text' name='youtubeURL2' id="youtubeURL2" placeholder="Enter Video 2 Code"/></br>
+      <h2>Slideshow Videos</h2>
+      <h3>  <input type="checkbox" name="youtubeSlide" value="yes" id="twitterSwitch" checked="checked">Slide Show Video</h3>
+    </div>
+<!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <div id="right-container-2">
+      <!--Event Area Name the event, then choose the date-->
+        <h3>
+          <!--Event 1-->
+          <label class=editTitleText>Event 1:</label></br>
+        </h3>
+          <p>Title:<input type='text' name='title' class='editTitle' placeholder="Event 1 Title"/></br>
+          Date:<input type="text" id="datepicker" class='datepicker' name="datepicker" placeholder="Date 1" /></p>
+        <h3>
+          <!--Event 2-->
+          <label class=editTitleText>Event 2:</label></br>
+        </h3>
+    <p>Title:<input type='text' name='title2' class='editTitle' placeholder="Event 2 Title"/></br>
+        Date:<input type="text" id="datepicker2" class='datepicker' name="datepicker2" placeholder="Date 2" /></p>
+        <h3>
+          <!--Event 3-->
+          <label class=editTitleText>Event 3:</label></br>
+        </h3>
+    <p>Title:<input type='text' name='title3' class='editTitle' placeholder="Event 3 Title"/></br>
+          Date:<input type="text" id="datepicker3" class='datepicker' name="datepicker3" placeholder="Date 3" /></p>
+          <h3>
+            <!--Event 4-->
+            <label class=editTitleText>Event 4:</label></br>
+          </h3>
+    <p>Title:<input type='text' name='title4' class='editTitle' placeholder="Event 4 Title"/></br>
+          Date:<input type="text" id="datepicker4" class='datepicker' name="datepicker4" placeholder="Date 4" /></p>
+          <h3>
+            <!--Event 5-->
+            <label class=editTitleText>Event 5:</label></br>
+          </h3>
+    <p>Title:<input type='text' name='title5' class='editTitle' placeholder="Event 5 Title"/></br>
+          Date:<input type="text" id="datepicker5" class='datepicker' name="datepicker5" placeholder="Date 5"/></p>
+          <input type='submit' id='submit' value='Submit'>
+    </div>
+  </div>
+  </form>
+<!--iiiiiiiiiiiiiiiiiiiii BOTTOM CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+  <div id="bottom-container">
+
+  </div>
+</body>
+
+<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+</html>

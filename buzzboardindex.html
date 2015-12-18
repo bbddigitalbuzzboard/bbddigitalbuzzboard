@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!DIGITAL BUZZBOARD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+TITLE: Digital Buzzboard
+AUTHOR: Mitchell Ungar
+DATE: November 27 2015
+VERSION: 2.0.1
+This program uses "WebRTC" through javascript to connect two computers
+through git pages and pubnub and allow two locations to see eachother through
+webcam, and to see the birthdays and anniversary's of fellow employee's. It
+Also shows the time and date.
+
+How to run.
+After pushing to the git repo type in
+http://mitchellungar.github.io
+NOTE:
+it is not HTTPS it is HTTP.
+Reason is that the security stops the camera stream.
+NOTE:
+When it comes to connecting to other computers it runs better
+in firefox. With google chrome sometimes doesn't display camera
+but will produce audio.
+TODO
+
+
+NOTE:
+Resources:
+buzzboardindex.html
+editbuzzboardindex.html
+excel.csv
+index.html
+read-csv.js
+script.js
+login.js
+style.css
+-->
+<html  id="htmltag">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-ico" href="Pictures/icon.png" />`
+    <title>Benefits By Design Buzzboard</title>
+    <!--Lets you use jquery and avoid downloading NPM modules-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!--Keeps all the DIV's in the right spot, as well as organizes the video area-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="http://www.youtube.com/player_api"></script>
+  </head>
+  <body id="body">
+<!--iiiiiiiiiiiiiiiiiiii TOP CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+<div id="main-container">
+    <div id="top-container">
+      <!--BBD LOGO TOP LEFT-->
+      <img src="Pictures/bbdLogo2.png" alt="BBDLogo" height="75%" width="13.15789473684211%" id="BBDLOGO">
+      <!--Title of the page, TOP MIDDLE-->
+      <!--<img alt="title" height="125" width="600" id="title">-->
+      <center>
+      <div id="titleTop">
+
+        <label id='titleLabel'>Inserting Title...</label>
+      </div>
+    </center>
+    <div id="date-div">
+      <!--The Date top right corner-->
+      <h1 id="dtField"></h1>
+      <!--The Time, right below the date-->
+      <h1 id="showTime"></h1>
+    </div>
+    </div>
+<!--iiiiiiiiiiiiiiiiiiiii MAIN CONTATINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+    <!--Main div below top div-->
+
+      <div id="left-container">
+
+      </div>
+<!--iiiiiiiiiiiiiiiiiiiii MIDDLE CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+      <div id="mid-container">
+        <!--Video Div for new video to be created in-->
+        <div id="vid-area">
+          <div id="vid-box"></div>
+        </div>
+          <div id="vid-area-2">
+        <div id="vid-box-2"></div>
+      </div>
+      </div>
+<!--iiiiiiiiiiiiiiiiiiiii RIGHT CONTAINER iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+      <div id="right-container">
+        <h1 id="lrgTitle">Events</h1>
+        <h2 class="eventTitle"></h2>
+        <!--Lets you read the URL for variables-->
+        <script type="text/javascript" src="js/read-csv.js"></script>
+        <div id="csvDiv">
+            <h3>Click to load birthdays and anniversaries</h3>
+            <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+        </div>
+
+      </div>
+    </body>
+<!--iiiiiiiiiiiiiiiiiiiiii END iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii-->
+</html>
