@@ -197,7 +197,7 @@ function eventHandler() {
             if(qs("youtubeSlide") == "yes"){
               if(qs("youtubeURL2") == ""){
                 console.log("No second video code");
-                switchDisp();
+                setTimeout(switchDisp,1);
               }else{
                 ytSlideshow();
               }
@@ -205,7 +205,7 @@ function eventHandler() {
             }
             //Replaying the video at end of video
             if(qs("radioInstagram") == "none"){
-            switchDisp();
+            setTimeout(switchDisp,1);
             }
         }
     }
