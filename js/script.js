@@ -194,18 +194,18 @@ function eventHandler() {
               document.getElementById('vid-area').innerHTML = '<iframe src="http://widget.websta.me/in/bbdcanada/?s=200&w=3&h=2&b=0&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" id="instagram-frame" style="border:none;overflow:hidden;width:615px; height: 410px" ></iframe> <!-- websta - websta.me -->';
               setTimeout(switchDisp,20000);
             }
-            if(qs("youtubeSlide") == "yes"){
-              if(qs("youtubeURL2") == ""){
-                console.log("No second video code");
-                setTimeout(switchDisp,1);
-              }else{
-                ytSlideshow();
-              }
 
-            }
             //Replaying the video at end of video
             if(qs("radioInstagram") == "none"){
-            setTimeout(switchDisp,1);
+            switchDisp();
+            }
+            if(qs("youtubeSlide") == "yes"){
+              if(qs("youtubeURL2") != ""){
+                ytSlideshow();
+              } else {
+                console.log("No youtube 2");
+                switchDisp();
+              }
             }
         }
     }
